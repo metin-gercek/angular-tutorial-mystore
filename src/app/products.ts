@@ -26,7 +26,7 @@ export const products = [
     price: 1099,
     short_description: 'iPhone 7 features an all-new 12-megapixel camera with an /1.8 aperture for great ...more ',
 
-    imgUrl:'/assets/pieni-iphone-7.png',
+    imgUrl:'assets/pieni-iphone-7.png',
 
      description: 'iPhone 7 features an all-new 12-megapixel camera with an /1.8 aperture for great low-light photos and 4K video. Optical image stabilisation. A 4.7-inch Retina HD display with wide colour and 3D Touch. An A10 Fusion chip for up to two times faster performance than iPhone 6. Touch ID. Faster 4G LTE.2 The longest battery life in an iPhone. Immersive stereo sound, splash and water resistance1, and iOS 10.',
   }
