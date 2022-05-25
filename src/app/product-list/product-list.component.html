@@ -1,0 +1,59 @@
+<figure>
+  <img
+    src="../../assets/iso-iphone-xs.jpg"
+    alt="iphonexs"
+    class="img-fluid mx-auto d-block"
+  />
+</figure>
+
+<h2>Phone Models</h2>
+<div class="card-group">
+  <div
+    class="m-3 card rounded border"
+    *ngFor="let product of products;"
+  >
+    <div *ngIf="product.imgUrl">
+      <img
+        [src]="product.imgUrl"
+        class="p-5 card-img-top img-responsive mx-auto d-block"
+      />
+    </div>
+    <br />
+
+    <div class="card-body">
+      <h3 class="pl-2 card-title">
+        <a
+          [title]="product.name + ' details'"
+          [routerLink]="['/products', product.id]"
+        >
+          {{ product.name }}
+        </a>
+      </h3>
+      <p class="price">{{ product.price | currency: "EUR" }}</p>
+      <div class="pl-2 card-text">
+        <p
+          *ngIf="product.short_description"
+          [routerLink]="['/products', product.id]"
+        >
+          Description: {{ product.short_description }}
+        </p>
+      </div>
+
+      <button class="btn btn-info m-2" (click)="addToCart(product)">Buy Now</button>
+
+      <button class="btn btn-primary m-1" (click)="share()">
+        <fa-icon [icon]="faFacebookF"></fa-icon>
+      </button>
+      <button class="btn btn-primary m-1" (click)="share()">
+        <fa-icon [icon]="faTwitterSquare"></fa-icon>
+      </button>
+      <button class="btn btn-primary m-1" (click)="share()">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </button>
+    </div>
+    <app-product-alerts [product]="product" (notify)="onNotify()">
+    </app-product-alerts>
+  </div>
+
+
+</div>

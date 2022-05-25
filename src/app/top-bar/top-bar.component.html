@@ -1,0 +1,21 @@
+<div class="container-fluid pt-1">
+  <div class="row">
+    <div class="col-6" [routerLink]="['/']">
+      <a>
+        <h2 class="pt-1">
+          <fa-icon [icon]="faMobileAlt"></fa-icon> Phone Model Store
+          <sup>
+            <fa-icon [icon]="faTrademark"></fa-icon>
+          </sup>
+        </h2>
+      </a>
+    </div>
+
+    <div class="col-6 pb-1 d-flex justify-content-end">
+      <a class="btn fancy-button" [routerLink]="['/cart']">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Checkout</a
+      >
+    </div>
+  </div>
+</div>
